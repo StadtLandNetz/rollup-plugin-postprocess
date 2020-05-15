@@ -6,8 +6,9 @@
   "module": "dist/rollup-plugin-postprocess.m.js",
   "source": "postprocess.js",
   "scripts": {
+    "lint": "eslint .",
     "prepare": "microbundle --external all --target node --format cjs,es --no-compress",
-    "test": "eslint postprocess.js && npm run -s prepare && node test",
+    "test": "npm run lint && npm run -s prepare && nyc node test",
     "release": "npm run -s prepare && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
   "eslintConfig": {
@@ -36,11 +37,12 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^4.13.1",
-    "eslint-config-developit": "^1.1.1",
-    "microbundle": "^0.12.0"
+    "eslint": "^7.0.0",
+    "eslint-config-developit": "^1.2.0",
+    "microbundle": "^0.12.0",
+    "nyc": "^15.0.1"
   },
   "dependencies": {
-    "magic-string": "^0.22.4"
+    "magic-string": "^0.25.7"
   }
 }
