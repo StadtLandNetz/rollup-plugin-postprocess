@@ -27,13 +27,18 @@
     "index.js",
     "dist"
   ],
-  "repository": "developit/rollup-plugin-postprocess",
+  "repository": "https://github.com/developit/rollup-plugin-postprocess",
+  "homepage": "https://github.com/developit/rollup-plugin-postprocess",
+  "bugs": "https://github.com/developit/rollup-plugin-postprocess/issues",
   "author": "Jason Miller <jason@developit.ca> (http://jasonformat.com)",
+  "contributors": [
+    "Brett Zamir"
+  ],
   "license": "MIT",
   "devDependencies": {
     "eslint": "^4.13.1",
     "eslint-config-developit": "^1.1.1",
-    "microbundle": "^0.4.1"
+    "microbundle": "^0.12.0"
   },
   "dependencies": {
     "magic-string": "^0.22.4"
